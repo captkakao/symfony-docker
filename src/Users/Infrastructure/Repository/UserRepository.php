@@ -3,10 +3,11 @@
 namespace App\Users\Infrastructure\Repository;
 
 use App\Users\Domain\Entity\User;
+use App\Users\Domain\Repository\UserRepositoryInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
-class UserRepository extends ServiceEntityRepository
+class UserRepository extends ServiceEntityRepository implements UserRepositoryInterface
 {
     public function __construct(ManagerRegistry $registry)
     {
@@ -19,8 +20,15 @@ class UserRepository extends ServiceEntityRepository
         $this->_em->flush();
     }
 
-    public function findByUlid(string $ulid): User
+    public function findByUlid(string $ulid): ?User
     {
         return $this->find($ulid);
+    }
+
+    public function findByEmail(string $email): ?User
+    {
+        return $this->findOneBy([
+            'email' => $email,
+        ]);
     }
 }
