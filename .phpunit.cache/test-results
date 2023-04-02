@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"App\\Tests\\Functional\\Controller\\HealthCheckTest::test_test_request_responded_successful_result":0.035}}
+{"version":1,"defects":[],"times":{"App\\Tests\\Functional\\Controller\\HealthCheckTest::test_test_request_responded_successful_result":0.215}}
