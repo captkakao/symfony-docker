@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"App\\Tests\\Functional\\Controller\\HealthCheckTest::test_test_request_responded_successful_result":0.215}}
+{"version":1,"defects":{"App\\Tests\\Functional\\Users\\Infrastructure\\Repository\\UserRepositoryTest::test_user_added_successfully":8},"times":{"App\\Tests\\Functional\\Controller\\HealthCheckTest::test_test_request_responded_successful_result":3.591,"App\\Tests\\Functional\\Users\\Infrastructure\\Repository\\UserRepositoryTest::test_user_added_successfully":0.097}}
