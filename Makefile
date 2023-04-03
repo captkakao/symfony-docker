@@ -32,10 +32,15 @@ dc_down:
 dc_restart:
 	make dc_stop dc_start
 
+dc_rebuild_up:
+	make dc_stop dc_build dc_up
 
 ##################
 # App
 ##################
+app_install:
+	${DOCKER_COMPOSE} exec -u www-data php-fpm cp .env.example .env
+	${DOCKER_COMPOSE} exec -u www-data php-fpm composer install
 
 app_bash:
 	${DOCKER_COMPOSE} exec -u www-data php-fpm bash
